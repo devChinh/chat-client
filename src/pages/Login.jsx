@@ -20,7 +20,7 @@ function Login() {
       if(localStorage.getItem("chat-app-user")){
          navigate('/chat')
       }
-    }, [])
+    }, [navigate])
 
   const handleSubmit = async (e) => {
 

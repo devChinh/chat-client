@@ -48,7 +48,7 @@ function Chat() {
       }
     }
     fetch()
-  }, [])
+  }, [navigate])
 
   useEffect(() => {
     const fetch = async () => {
@@ -62,7 +62,7 @@ function Chat() {
       }
     }
     fetch()
-  }, [currentUser])
+  }, [currentUser , navigate])
 
   const handleChatChange = (chat) => {
     setCurrentChat(chat)

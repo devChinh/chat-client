@@ -47,7 +47,7 @@ function SetAvatar() {
     if (!localStorage.getItem("chat-app-user")) {
       navigate('/login')
     }
-  }, [])
+  }, [navigate])
 
   const setProfilePicture = async () => {
     if (selectedAvatar === undefined) {

@@ -26,7 +26,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
       };
       fetch();
     }
-  }, [currentChat]);
+  }, [currentChat , currentUser]);
 
 
   const handleSendMsg = async (msg) => {
@@ -53,7 +53,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
         setArrivalMessages({ fromSelf: false, message: msg });
       });
     }
-  }, []);
+  }, [socket]);
 
   useEffect(() => {
     arrivalMessages && setMessages((prev) => [...prev, arrivalMessages]);
